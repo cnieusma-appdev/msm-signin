@@ -48,6 +48,16 @@
       </div>
 
       <div>
+      <select>
+        <%= Director.all.order(:name).each do |a_director| %>
+          <option value="<%= a_director.id %>">
+            <%= a_director.name %>
+          </option>
+        <% end %>
+      </select>
+      </div>
+
+      <div>
         <label for="description_box">
           Description
         </label>
